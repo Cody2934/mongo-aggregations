@@ -1,4 +1,4 @@
-const { getCar, getCars, getEnjoyments } = require('../lib/db/data-helpers');
+const { getCar, getCars, getEnjoyments } = require('../db/data-helpers');
 const request = require('supertest');
 const app = require('../lib/app');
 

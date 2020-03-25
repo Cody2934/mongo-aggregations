@@ -1,10 +1,10 @@
-const Car = require('../model/Car');
-const Enjoyment = require('../model/Enjoyment');
+const Car = require('../lib/model/Car');
+const Enjoyment = require('../lib/model/Enjoyment');
 const chance = require('chance').Chance();
 
 module.exports = async({ carsToCreate = 10, enjoymentsToCreate = 100 } = {}) => {
   const speed = ['fast', 'slow', 'insane'];
-  const make = ['tesla', 'lambo', 'subaur'];
+  const make = ['tesla', 'lambo', 'subaru'];
   const looks = ['beautiful', 'ugly', 'smexy'];
   const cars = await Car.create([...Array(carsToCreate)].map(() => ({
     make: chance.pickone(make),
